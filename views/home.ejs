@@ -1,0 +1,726 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Career Ladder Official Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    
+    
+    
+    <link rel="stylesheet" href="../jobassests/css/custom-bs.css">
+    <link rel="stylesheet" href="../jobassests/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../jobassests/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../jobassests/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../jobassests/fonts/line-icons/style.css">
+    <link rel="stylesheet" href="../jobassests/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../jobassests/css/animate.min.css">
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables.bootstrap4.min.js"></script>
+
+    <style>
+      .dataTables_wrapper .dataTables_filter {
+        float: right;
+      }
+  
+      .dataTables_wrapper .dataTables_paginate {
+        float: right;
+      }
+      table, th, td {
+    border: none;
+  }
+  .site-navigation .nav-link {
+  color: white; /* Change the link color to white */
+}
+
+.site-navigation .nav-link:hover {
+  color: #fffcfc; /* Optionally, you can change the hover color */
+}
+
+    </style>
+
+    
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../jobassests/css/style.css">    
+    <link rel="stylesheet" href="/main.css">  
+  </head>
+  <body id="top">
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+    
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6" ><a href="/">Career Ladder</a></div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+              <li><a href="/" class="nav-link active" style="color: white;">Home</a></li>
+              <li><a href="/about" class="nav-link" style="color: white;">About</a></li>
+              <li><a href="/profile" class="nav-link" style="color: white;">Profile</a></li>
+              <li><a href="/bloguser" class="nav-link" style="color: white;">Blog</a></li>
+              <li><a href='/appliedjobs' class="nav-link" style="color: white;">Your applications</a></li>
+            </ul>
+          </nav>
+          
+          
+          
+          <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+            <div class="ml-auto">
+              <a href="/BecomeCompany" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span
+                class="mr-2 icon-add"></span>Post a Job</a>
+              
+              <% if (isAuthenticated) { %>
+                <a href="/logout" class="btn btn-custom border-width-2 d-none d-lg-inline-block"
+                  style="background-color: rgb(184, 216, 255) !important;">
+                  <span class="mr-2 icon-lock_open"></span>Logout
+                </a>
+                <% } else { %>
+                  <a href="/login" class="btn btn-custom border-width-2 d-none d-lg-inline-block"
+                    style="background-color: rgb(51, 61, 123) !important;">
+                    <span class="mr-2 icon-lock_outline"></span>Login
+                  </a>
+                  <% } %>
+                <!-- <a href="/notifications" class="btn btn-custom border-width-2 d-none d-lg-inline-block" style="background-color: rgb(220, 221, 226) !important; color: black;">
+                <span class="icon-bell" style="color: darkblue;"></span> -->
+            </a>
+          
+              
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+
+    
+
+    <!-- HOME -->
+    <section class="home-section section-hero overlay bg-image" style="background-image: url('../jobassests/images/frontbackground.avif');" id="home-section">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-12">
+            <div class="mb-5 text-center">
+              <h1 class="text-white font-weight-bold">"Start where you are. Use what you have. Do what you can.."</h1>
+              <p>Unlock your potential! Find your dream job today. From entry-level positions to executive roles, start your journey to success with us. Join now and take the next step in your career!</p>
+            </div>
+
+            <section class="py-5 bg-image fixed overlay" style="background-color: rgba(211, 223, 241, 0.1);">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-8">
+                    <h2 class="text-white">Looking For A Job?</h2>
+                    <p class="mb-0 text-white lead">"Explore endless diverse opportunities and take the next step in your career journey. Join us today!"</p>
+                  </div>
+                  <div class="col-md-3 ml-auto">
+
+
+
+                    <% if (isAuthenticated) { %>
+                    
+                      <% } else { %>
+                        <a href="/register" class="btn btn-light btn-block btn-lg">Sign Up</a>
+                        <% } %>
+
+
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+           
+                
+          
+        
+      </div>
+
+      <a href="#next" class="scroll-button smoothscroll">
+        <span class=" icon-keyboard_arrow_down"></span>
+      </a>
+
+    </section>
+    <section class="py-5 bg-image fixed overlay" id="next" style="background-color: rgb(74, 87, 110);">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="section-title mb-2 text-white">JobBoard Site Stats</h2>
+            <p class="lead text-white">"Track candidate profiles, active job postings, and company listings on our job board. Stay informed with essential metrics for effective hiring or job searching."</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row pb-0 block__19738 section-counter justify-content-center">
+
+            <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <div class="d-flex align-items-center justify-content-center mb-2">
+                <strong class="number">
+                  <%= roleCounts.user %>
+                </strong>
+              </div>
+              <span class="caption">Candidates</span>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <div class="d-flex align-items-center justify-content-center mb-2">
+                <strong class="number" data-number="<%= count %>">
+                  <%= count %>
+                </strong>
+              </div>
+              <span class="caption">Jobs Posted</span>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <div class="d-flex align-items-center justify-content-center mb-2">
+                <strong class="number" data-number="<%= roleCounts.company %>">
+                  <%= roleCounts.company %>
+                </strong>
+              </div>
+              <span class="caption">Companies</span>
+            </div>
+
+          </div>
+        </div>
+
+    </section>
+
+
+   
+
+    
+    <% if (empData.length > 0) { %>
+    <section class="site-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="section-title mb-2"><%= empData.length  %> Job Listed</h2>
+          </div>
+        </div>
+        
+        
+        <div class="table-responsive table mt-2" id="dataTable-1" role="grid" aria-describedby="dataTable_info">
+          <table class="table my-0" id="dataTable" >
+              <thead>
+                  <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                <% empData.forEach(data => { %>
+                  <tr role="row" class="even">
+                    <td><% if (data.jlogo) { %>
+                        
+                          <img src="/upload/<%= data.jlogo %>" alt="jlogo"
+                            style="max-width: 50px; max-height: 100px;">
+                          <% } else { %>
+                            
+                            No Photo
+                            <% } %></td>
+
+                    <td><%= data.jobtitle %></td>
+                    <td><%= data.role %></td>
+                    <td><%= data.description %></td>
+                    
+
+                    <td>
+                      <div class="btn-group" role="group" aria-label="Operations">
+                        <a class="btn btn-primary" href="/apply/<%= data._id %>">View</a>
+        
+                        
+                      </div>
+                    </td>
+                 
+                    </tr>
+                    <% }); %>
+              </tbody>
+            
+          </table>
+      </div>
+     
+  </div>
+</div>
+</div>
+</div>
+<footer class="bg-white sticky-footer">
+<div class="container my-auto">
+<div class="text-center my-auto copyright"><span></span></div>
+</div>
+</footer>
+</div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+</div>
+<% } else { %>
+<p></p>
+<% } %>
+
+       
+
+      </div>
+    </section>
+
+
+  <!--whatwedo section -->
+  <section  class="we-do">
+    <div class="container">
+      <div class="we-do-details">
+        <div class="section-header text-center">
+          <h2>What We Do</h2>
+          <p>
+            "Simplifying job search and recruitment. Connecting talent with opportunities. Empowering individuals and businesses for success in the workforce."
+          </p>
+        </div><!--/.section-header-->
+        <div class="we-do-carousel">
+          <div class="row">
+            <div class="col-sm-4 col-xs-12">
+              <div class="single-we-do-box text-center">
+                <div class="we-do-description">
+                  <div class="we-do-info">
+                    <div class="we-do-img">
+                      <img src="../jobassests/images/wedo1.jpg" alt="image of consultency" />
+                    </div><!--/.we-do-img-->
+                    <div class="we-do-topics">
+                      <h2>
+                        <a href="#">
+                          Job Search Simplification
+                        </a>
+                      </h2>
+                    </div><!--/.we-do-topics-->
+                  </div><!--/.we-do-info-->
+                  <div class="we-do-comment">
+                    <p>
+                      Streamlining the job search process with success stories.
+
+                    </p>
+                  </div><!--/.we-do-comment-->
+                </div><!--/.we-do-description-->
+              </div><!--/.single-we-do-box-->
+            </div><!--/.col-->
+            <div class="col-sm-4 col-xs-12">
+              <div class="single-we-do-box text-center">
+                <div class="we-do-description">
+                  <div class="we-do-info">
+                    <div class="we-do-img">
+                      <img src="../jobassests/images/wedo2.jpg" alt="image of business" />
+                    </div><!--/.we-do-img-->
+                    <div class="we-do-topics">
+                      <h2>
+                        <a href="#">
+                          Talent Connection
+                        </a>
+                      </h2>
+                    </div><!--/.we-do-topics-->
+                  </div><!--/.we-do-info-->
+                  <div class="we-do-comment">
+                    <p>
+                      Connecting individuals with relevant opportunities.
+                    </p>
+                  </div><!--/.we-do-comment-->
+                </div><!--/.we-do-description-->
+              </div><!--/.single-we-do-box-->
+            </div><!--/.col-->
+            <div class="col-sm-4 col-xs-12">
+              <div class="single-we-do-box text-center">
+                <div class="we-do-description">
+                  <div class="we-do-info">
+                    <div class="we-do-img">
+                      <img src="../jobassests/images/wedo3.jpg" alt="image of support" />
+                    </div><!--/.we-do-img-->
+                    <div class="we-do-topics">
+                      <h2>
+                        <a href="#">
+                          Empowerment Solutions
+                        </a>
+
+                      </h2>
+                    </div><!--/.we-do-topics-->
+                  </div><!--/.we-do-info-->
+                  <div class="we-do-comment">
+                    <p>
+                      Providing tools for success in the job market.
+                    </p>
+                  </div><!--/.we-do-comment-->
+                </div><!--/.we-do-description-->
+              </div><!--/.single-we-do-box-->
+            </div><!--/.col-->
+          </div><!--/.row-->
+        </div><!--/.we-do-carousel-->
+      </div><!--/.we-do-details-->
+    </div><!--/.container-->
+
+  </section><!--/.we-do-->
+  <!--we-do end-->
+
+   
+
+    
+    
+       
+
+
+    <section class="bg-light pt-5 testimony-full">
+        
+        <div class="owl-carousel single-carousel">
+
+        
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 align-self-center text-center text-lg-left">
+                <blockquote>
+                  <p>&ldquo;CareerLadder turned my job search into a breeze! The platform's intuitive design and customized job listings saved me hours of scrolling. Secured interviews with top companies. Thrilled with the results!&rdquo;</p>
+                  <p><cite> &mdash; Prageeth Dayananda </cite></p>
+                </blockquote>
+              </div>
+              <div class="col-lg-6 align-self-end text-center text-lg-right">
+                <img src="../jobassests/images/review1.jpg" alt="Image" class="img-fluid mb-0">
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 align-self-center text-center text-lg-left">
+                <blockquote>
+                  <p>&ldquo;Skeptical at first, but CareerLadder exceeded expectations. Navigating the job market was daunting, but their platform made it manageable. Found multiple promising opportunities quickly. Impressed!
+
+&rdquo;</p>
+                  <p><cite> &mdash;James Daz </cite></p>
+                </blockquote>
+              </div>
+              <div class="col-lg-6 align-self-end text-center text-lg-right">
+                <img src="../jobassests/images/review2.jpg" alt="Image" class="img-fluid mb-0">
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 align-self-center text-center text-lg-left">
+                <blockquote>
+                  <p>&ldquo;The job market seemed like a maze, but CareerLadder's platform guided me through with ease. Within no time, I discovered numerous exciting opportunities that matched my aspirations. I'm thoroughly impressed with their service!
+
+&rdquo;</p>
+                  <p><cite> &mdash;Ganeesha Rananga </cite></p>
+                </blockquote>
+              </div>
+              <div class="col-lg-6 align-self-end text-center text-lg-right">
+                <img src="../jobassests/images/review3.jpg" alt="Image" class="img-fluid mb-0">
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+    </section>
+
+    <!--nwes start -->
+		<section  class="news">
+			<div class="container">
+				<div class="news-details">
+					<div class="section-header text-center">
+						<h2>Our Latest Blogs</h2>
+						<p>
+							"Stay updated with our Latest posts section, featuring the most relevant industry updates and career insights. From emerging job trends to expert tips, access timely information to stay ahead in your career journey."
+						</p>
+					</div><!--/.section-header-->
+					<div class="news-card news-card-pb-25">
+							<div class="row">
+                <div class="col-md-4 col-sm-6">
+									<div class="single-news-box">
+										<div class="news-box-bg">
+											<img src="../jobassests/images/interviewtipsblog.jpg" alt="blog image">
+											<div class="isotope-overlay">
+												<a href="blog_single.html">
+													<span class="lnr lnr-link"></span>
+													
+												</a>
+											</div>
+
+										</div><!--/.team-box-bg-->
+										<div class="news-box-inner">
+											<h3>
+												<a href="/blog">
+													Interviewer Insights and Perspectives for your dream job
+												</a>
+											</h3>
+											<p class="news-meta">
+												Posted By:  <span>Alexa Deez</span>  //  On <span>03rd FEB, 2023</span>
+											</p>
+											<!-- <a href="#" class="learn-btn">
+												learn more
+											</a> -->
+										</div><!--/.news-box-inner-->
+									</div><!--/.single-news-box-->
+								</div><!--.col-->
+								<div class="col-md-4 col-sm-6">
+									<div class="single-news-box">
+										<div class="news-box-bg">
+											<img src="../jobassests/images/profdevblog.jpg" alt="blog image">
+											<div class="isotope-overlay">
+												<a href="blog_single.html">
+													<span class="lnr lnr-link"></span>
+													
+												</a>
+											</div>
+
+										</div><!--/.team-box-bg-->
+										<div class="news-box-inner">
+											<h3>
+												<a href="/blog2">
+													Professional Development Resources in building the success
+												</a>
+											</h3>
+											<p class="news-meta">
+												Posted By:  <span>Ruffa Steven</span>  //  On <span>6th June, 2022</span>
+											</p>
+											<!-- <a href="#" class="learn-btn">
+												learn more
+											</a> -->
+										</div><!--/.news-box-inner-->
+									</div><!--/.single-news-box-->
+								</div><!--.col-->
+							
+								<div class="col-md-4 col-sm-6">
+									<div class="single-news-box">
+										<div class="news-box-bg">
+											<img src="../jobassests/images/personaldevblog.png" alt="blog image">
+											<div class="isotope-overlay">
+												<a href="blog_single.html">
+													<span class="lnr lnr-link"></span>
+													
+												</a>
+											</div>
+
+										</div><!--/.team-box-bg-->
+										<div class="news-box-inner">
+											<h3>
+												<a href="blog_single.html">
+													Hire a Branding Consultant With a Similar Aesthetic to Your Own
+												</a>
+											</h3>
+											<p class="news-meta">
+												Posted By:  <span>Chandana Gamagee</span>  //  On <span>12th April, 2023</span>
+											</p>
+											<!-- <a href="#" class="learn-btn">
+												learn more
+											</a> -->
+										</div><!--/.news-box-inner-->
+									</div><!--/.single-news-box-->
+								</div><!--.col-->
+							</div><!--/.row-->
+							<div class="project-btn text-center">
+                <a href="/bloguser" class="project-view">Read More</a>
+            </div><!--/.project-btn-->
+					</div><!--/.news-card-->
+					
+				</div><!--/news-details-->
+			</div><!--/.container-->
+
+		</section><!--/news-->
+		<!--news end-->
+
+    <!--subscription strat -->
+		<section id="contact"  class="subscription">
+			<!-- <div class="container">
+				<div class="subscribe-title text-center">
+					<h2>
+            Attention job seekers! Take your career to new heights by subscribing to our newsletter
+					</h2>
+					<p>
+						"Stay ahead in your career journey! Subscribe to our newsletter for exclusive job listings, career tips, and industry insights delivered straight to your inbox. Don't miss out on the opportunities waiting for you!"
+					</p>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="subscription-input-group">
+							<form action="#">
+								<input type="email" class="subscription-input-form" placeholder="Enter your email here"></p>
+								<button class="appsLand-btn subscribe-btn" onclick="window.location.href='#'">
+									Submit
+								</button>
+                <p>
+                  <p>
+                    <p>
+							</form>
+						</div>
+					</div>	
+				</div>
+			</div> -->
+
+		</section><!--/subscription-->	
+
+   
+    
+    <footer class="site-footer">
+
+      <a href="#top" class="smoothscroll scroll-top">
+        <span class="icon-keyboard_arrow_up"></span>
+      </a>
+
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Search Trending</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Web Designer</a></li>
+              <li><a href="#">Graphic Designer</a></li>
+              <li><a href="#">Web Developer Intern</a></li>
+              <li><a href="#">Python Handler</a></li>
+              <li><a href="#">Backend Developer</a></li>
+              <li><a href="#">Marketing Manager</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Quick Links</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/profile">Profile</a></li>
+              <li><a href="/">Search Jobs</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Support</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Contact Us</h3>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/example"><span class="icon-facebook"></span></a>
+              <a href="https://twitter.com/example"><span class="icon-twitter"></span></a>
+              <a href="https://www.instagram.com/company/example"><span class="icon-instagram"></span></a>
+              <a href="https://www.linkedin.com/company/example"><span class="icon-linkedin"></span></a>
+              
+            </div>
+            <ul class="list-unstyled">
+            <li>Email: <a href="mailto:info@careerladder.com">info@careerladder.com</a></li>
+            <li>Phone: +94112858585</li>
+            <li>Fax: +94112858585</li>
+          </ul>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="copyright"><small>
+              
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Career Ladder Website All rights reserved..! 
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+
+ 
+
+  
+
+  </script>
+
+
+
+
+    
+</script>
+  
+
+
+
+
+
+
+    <!-- SCRIPTS -->
+
+    <script src="../jobassests/js/bootstrap.bundle.min.js"></script>
+    <script src="../jobassests/js/isotope.pkgd.min.js"></script>
+    <script src="../jobassests/js/stickyfill.min.js"></script>
+    <script src="../jobassests/js/jquery.fancybox.min.js"></script>
+    <script src="../jobassests/js/jquery.easing.1.3.js"></script>
+    
+    <script src="../jobassests/js/jquery.waypoints.min.js"></script>
+    <script src="../jobassests/js/jquery.animateNumber.min.js"></script>
+    <script src="../jobassests/js/owl.carousel.min.js"></script>
+    
+    <script src="../jobassests/js/bootstrap-select.min.js"></script>
+    
+    <script src="../jobassests/js/custom.js"></script>
+   
+   
+
+     
+
+
+
+
+    
+
+<script>
+   
+
+    $(document).ready(function() {
+    $('#dataTable').DataTable({
+      pageLength : 5,
+        lengthMenu: [[5, 10, 20, -1], [5, 10, 20, 'Todos']],
+        "paging": true,
+                "ordering": true,
+                "searching": true,
+                "info": true,
+                "paging":true,
+                
+  
+    });
+  });
+    
+</script>
+
+  </body>
+
+  
+</html>

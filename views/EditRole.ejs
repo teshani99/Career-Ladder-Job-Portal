@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patient Management System</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            text-align: center;
+        }
+
+        h2 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #6c757d;
+            margin-top: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        select {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-sizing: border-box;
+            width: 60%;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 60%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+
+  <div class="container">
+      <h2>Update Role</h2>
+      <p>User ID: <%= data._id %></p>
+      <form action="/admintest/<%= data._id %>?_method=PATCH" method="POST">
+          <input type="hidden" name="_method" value="PUT">
+          
+          <select name="role">
+              <option value="user" <%= data.role === 'user' ? 'selected' : '' %>>User</option>
+              <option value="company" <%= data.role === 'company' ? 'selected' : '' %>>company</option>
+              <option value="admin" <%= data.role === 'admin' ? 'selected' : '' %>>Admin</option>
+          </select>
+          
+          <button type="submit">Update Role</button>
+      </form>
+  </div>
+
+</body>
+
+</html>

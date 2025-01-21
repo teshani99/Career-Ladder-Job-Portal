@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Career Ladder Official Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/themify-icons/0.1.2/css/themify-icons.css">
+
+
+    <link rel="stylesheet" href="../jobassests/css/custom-bs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="../jobassests/fonts/icomoon/style.css">
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- jQuery UI library -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+   
+  
+    
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../jobassests/css/style.css">
+    <link rel="stylesheet" href="../joblisting.css">   
+  
+
+    <link rel="stylesheet" href="/bootstrap.minn.css">
+    <link rel="stylesheet" href="../jquery-ui.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+   
+    
+  <body id="top">
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+        <div class="container-xxl py-5 bg-dark page-header mb-5">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+            
+          <div class="site-logo col-6"><a href="/home">Career Ladder</a></div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+                <li><a href="/home">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/profile">Profile</a></li>
+             
+              <li class="has-children">
+                <a>Search Jobs</a>
+                <ul class="dropdown">
+                    <li><a href="/joblisting">Job Listing</a></li>
+                    <li><a href="/jobdetail">Job Detail</a></li>
+                </ul>
+            </li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/contact">Contact</a></li>
+              
+            </ul>
+          </nav>
+          
+          <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+            <div class="ml-auto">
+              
+              <a href="/BecomeCompany" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Post a Job</a>
+              <a href="/login" class="btn btn-custom border-width-2 d-none d-lg-inline-block" style="background-color: white !important;"><span class="mr-2 icon-lock_outline"></span>Login</a>
+              
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </header>
+
+   <!-- Header End -->
+   <div class="container-xxl py-5 bg-dark page-header mb-5">
+    
+</div>
+<!-- Header End -->
+
+<div class="job_listing_area plus_padding">
+    <div class="container">
+        <div class="page-header1">
+            <h1>Search Your Job</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="job_filter white-bg">
+                    <div class="form_inner white-bg">
+                        <h3>Filter</h3>
+                        <form id="filterForm">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="single_field">
+                                        <input type="text" id="searchKeyword" placeholder="Search keyword">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single_field">
+                                        <select id="locationFilter" class="wide">
+                                            <option data-display="Location">Location</option>
+                                            <option value="Western Province">Western Province</option>
+                                            <option value="Southern Province">Southern Province</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single_field">
+                                        <select id="categoryFilter" class="wide">
+                                            <option data-display="Category">Select Category</option>
+                                            <option value="Information & Technology">Information & Technology</option>
+                                            <option value="Account & Finance">Account & Finance</option>
+                                            <option value="Marketing">Marketing</option>
+                                            <option value="Food & Restaurant">Food & Restaurant</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single_field">
+                                        <select id="experienceFilter" class="wide">
+                                            <option data-display="Experience">Experience</option>
+                                            <option value="0">0 year</option>
+                                            <option value="1">1 year</option>
+                                            <option value="2">2 years</option>
+                                            <option value="3">3 years</option>
+                                            <option value="4">4 years</option>
+                                            <option value="5">5 years</option>
+                                            <option value="6">6 years</option>
+                                        
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single_field">
+                                        <select id="jobTypeFilter" class="wide">
+                                            <option data-display="Job type">Job type</option>
+                                            <option value="Full-time">Full-time</option>
+                                            <option value="Part-time">Part-time</option>
+                                            <option value="Internship">Internship</option>
+                                        </select>
+                                    </div>
+                                </div>
+                               
+                                
+                            </div>
+                        </form>
+                    </div>
+                    <div class="range_wrap">
+                        <label for="amount">Price range:</label>
+                        <div id="slider-range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 3.04878%; width: 96.9512%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 3.04878%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                        <p>
+                            <input type="text" id="amount" readonly="" style="border:0; color:#0a0a0a; font-size: 14px; font-weight:400;">
+                        </p>
+                    </div>
+                    <div class="reset_btn">
+                        <button class="boxed-btn3 w-100" type="button" onclick="filterJobs()">FIND JOB</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="recent_joblist_wrap">
+                    <div class="recent_joblist white-bg ">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h4>Job Listing</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="serch_cat d-flex justify-content-end">
+                                    <select>
+                                        <option data-display="Most Recent">Most Recent</option>
+                                        <option value="Marketer">Marketer</option>
+                                        <option value="Wordpress">Wordpress</option>
+                                        <option value="Designer">Designer</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="jobList" class="job_lists m-0">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 job-item" data-location="Western Province" data-category="Information & Technology" data-experience="1" data-job-type="Full-time" data-price="23000">
+                            <div class="single_jobs white-bg d-flex justify-content-between">
+                                <div class="jobs_left d-flex align-items-center">
+                                    <div class="thumb">
+                                        <img src="../jobassests/images/1.svg" alt="">
+                                    </div>
+                                    <div class="jobs_conetent">
+                                        <a href="job_details.html"><h4>Software Engineer</h4></a>
+                                        <div class="links_locat d-flex align-items-center">
+                                            <div class="location">
+                                                <p> <i class="fa fa-map-marker"></i> Malabe,Colombo</p>
+                                            </div>
+                                            <div class="location">
+                                                <p> <i class="fa fa-clock-o"></i> Full-time</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jobs_right">
+                                    <div class="apply_now">
+                                        <a class="heart_mark" href="/jobdetail"> <i class="fa fa-heart"></i> </a>
+                                        <a href="/jobdetail" class="boxed-btn3">Apply Now</a>
+                                    </div>
+                                    <div class="date">
+                                        <p>Date line: 12 August 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 job-item" data-location="Southern Province" data-category="Information & Technology" data-experience="1" data-job-type="Part-time">
+                            <div class="single_jobs white-bg d-flex justify-content-between">
+                                <div class="jobs_left d-flex align-items-center">
+                                    <div class="thumb">
+                                        <img src="../jobassests/images/2.svg" alt="">
+                                    </div>
+                                    <div class="jobs_conetent">
+                                        <a href="job_details.html"><h4>Digital Marketer</h4></a>
+                                        <div class="links_locat d-flex align-items-center">
+                                            <div class="location">
+                                                <p> <i class="fa fa-map-marker"></i> Mathara </p>
+                                            </div>
+                                            <div class="location">
+                                                <p> <i class="fa fa-clock-o"></i> Part-time</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jobs_right">
+                                    <div class="apply_now">
+                                        <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                        <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                    </div>
+                                    <div class="date">
+                                        <p>Date line: 31 July 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 job-item" data-location="Colombo Province" data-category="Marketing" data-experience="4" data-job-type="Full-time">
+                            <div class="single_jobs white-bg d-flex justify-content-between">
+                                <div class="jobs_left d-flex align-items-center">
+                                    <div class="thumb">
+                                        <img src="../jobassests/images/3.svg" alt="">
+                                    </div>
+                                    <div class="jobs_conetent">
+                                        <a href="job_details.html"><h4>Wordpress Developer</h4></a>
+                                        <div class="links_locat d-flex align-items-center">
+                                            <div class="location">
+                                                <p> <i class="fa fa-map-marker"></i> Wallawaththe,Colombo</p>
+                                            </div>
+                                            <div class="location">
+                                                <p> <i class="fa fa-clock-o"></i> Full-time</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jobs_right">
+                                    <div class="apply_now">
+                                        <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                        <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                    </div>
+                                    <div class="date">
+                                        <p>Date line: 31 November 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 job-item" data-location="Southern Province" data-category="Information & Technology" data-experience="1" data-job-type="Part-time">
+                            <div class="single_jobs white-bg d-flex justify-content-between">
+                                <div class="jobs_left d-flex align-items-center">
+                                    <div class="thumb">
+                                        <img src="../jobassests/images/4.svg" alt="">
+                                    </div>
+                                    <div class="jobs_conetent">
+                                        <a href="job_details.html"><h4>Visual Designer</h4></a>
+                                        
+                                        <div class="links_locat d-flex align-items-center">
+                                            <div class="location">
+                                                <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                                            </div>
+                                            <div class="location">
+                                                <p> <i class="fa fa-clock-o"></i> Part-time</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jobs_right">
+                                    <div class="apply_now">
+                                        <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                        <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                    </div>
+                                    <div class="date">
+                                        <p>Date line: 31 Jan 2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 job-item" data-location="Colombo Province" data-category="Account & Finance" data-experience="2" data-job-type="Part-time">
+                            <div class="single_jobs white-bg d-flex justify-content-between">
+                                <div class="jobs_left d-flex align-items-center">
+                                    <div class="thumb">
+                                        <img src="../jobassests/images/5.svg" alt="">
+                                    </div>
+                                    <div class="jobs_conetent">
+                                        <a href="job_details.html"><h4>Assistant Executive - Production/ Quality Control</h4></a>
+                                        <div class="links_locat d-flex align-items-center">
+                                            <div class="location">
+                                                <p> <i class="fa fa-map-marker"></i> Colombo</p>
+                                            </div>
+                                            <div class="location">
+                                                <p> <i class="fa fa-clock-o"></i> Part-time</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jobs_right">
+                                    <div class="apply_now">
+                                        <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                        <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                    </div>
+                                    <div class="date">
+                                        <p>Date line: 31 Jan 2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 job-item" data-location="Southern Province" data-category="Information & Technology" data-experience="1" data-job-type="Part-time">
+                            <div class="single_jobs white-bg d-flex justify-content-between">
+                                <div class="jobs_left d-flex align-items-center">
+                                    <div class="thumb">
+                                        <img src="../jobassests/images/6.svg" alt="">
+                                    </div>
+                                    <div class="jobs_conetent">
+                                        <a href="job_details.html"><h4>Creative Designer</h4></a>
+                                        <div class="links_locat d-flex align-items-center">
+                                            <div class="location">
+                                                <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                                            </div>
+                                            <div class="location">
+                                                <p> <i class="fa fa-clock-o"></i> Part-time</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jobs_right">
+                                    <div class="apply_now">
+                                        <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                        <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                    </div>
+                                    <div class="date">
+                                        <p>Date line: 31 Jan 2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 job-item" data-location="Colombo Province" data-category="Account & Finance" data-experience="2" data-job-type="Part-time">
+                            <div class="single_jobs white-bg d-flex justify-content-between">
+                                <div class="jobs_left d-flex align-items-center">
+                                    <div class="thumb">
+                                        <img src="../jobassests/images/job1.png" alt="">
+                                    </div>
+                                    <div class="jobs_conetent">
+                                        <a href="job_details.html"><h4>Asst. Manager, Production (Woven Dyeing)</h4></a>
+                                        <div class="links_locat d-flex align-items-center">
+                                            <div class="location">
+                                                <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                                            </div>
+                                            <div class="location">
+                                                <p> <i class="fa fa-clock-o"></i> Part-time</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jobs_right">
+                                    <div class="apply_now">
+                                        <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                        <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                    </div>
+                                    <div class="date">
+                                        <p>Date line: 31 Jan 2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 job-item" data-location="Colombo Province" data-category="Account & Finance" data-experience="2" data-job-type="Part-time">
+                            <div class="single_jobs white-bg d-flex justify-content-between">
+                                <div class="jobs_left d-flex align-items-center">
+                                    <div class="thumb">
+                                        <img src="../jobassests/images/2.svg" alt="">
+                                    </div>
+                                    <div class="jobs_conetent">
+                                        <a href="job_details.html"><h4>Deputy Manager/ Assistant Manager - Footwear</h4></a>
+                                        <div class="links_locat d-flex align-items-center">
+                                            <div class="location">
+                                                <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                                            </div>
+                                            <div class="location">
+                                                <p> <i class="fa fa-clock-o"></i> Part-time</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jobs_right">
+                                    <div class="apply_now">
+                                        <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                        <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                    </div>
+                                    <div class="date">
+                                        <p>Date line: 31 Jan 2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      
+                    <!-- Second Page - Slider Container -->
+<div class="slider_container">
+    <div class="job_lists m-0">
+    <div class="slide">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 job-item" data-location="Colombo Province" data-category="Marketing" data-experience="2" data-job-type="Part-time">
+            <div class="single_jobs white-bg d-flex justify-content-between">
+                <div class="jobs_left d-flex align-items-center">
+                    <div class="thumb">
+                        <img src="../jobassests/images/job1.png" alt="">
+                    </div>
+                    <div class="jobs_conetent">
+                        <a href="job_details.html"><h4>Asst. Manager, Production (Woven Dyeing)</h4></a>
+                        <div class="links_locat d-flex align-items-center">
+                            <div class="location">
+                                <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                            </div>
+                            <div class="location">
+                                <p> <i class="fa fa-clock-o"></i> Part-time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jobs_right">
+                    <div class="apply_now">
+                        <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                        <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                    </div>
+                    <div class="date">
+                        <p>Date line: 31 Jan 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 job-item" data-location="Colombo Province" data-category="Account & Finance" data-experience="2" data-job-type="Part-time">
+            <div class="single_jobs white-bg d-flex justify-content-between">
+                <div class="jobs_left d-flex align-items-center">
+                    <div class="thumb">
+                        <img src="../jobassests/images/2.svg" alt="">
+                    </div>
+                    <div class="jobs_conetent">
+                        <a href="job_details.html"><h4>Deputy Manager/ Assistant Manager - Footwear</h4></a>
+                        <div class="links_locat d-flex align-items-center">
+                            <div class="location">
+                                <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                            </div>
+                            <div class="location">
+                                <p> <i class="fa fa-clock-o"></i> Part-time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jobs_right">
+                    <div class="apply_now">
+                        <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                        <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                    </div>
+                    <div class="date">
+                        <p>Date line: 31 Jan 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 job-item" data-location="Colombo Province" data-category="Account & Finance" data-experience="2" data-job-type="Part-time">
+            <div class="single_jobs white-bg d-flex justify-content-between">
+                <div class="jobs_left d-flex align-items-center">
+                    <div class="thumb">
+                        <img src="../jobassests/images/job4.png" alt="">
+                    </div>
+                    <div class="jobs_conetent">
+                        <a href="job_details.html"><h4>R&D Manager (Technical Lab Department)</h4></a>
+                        <div class="links_locat d-flex align-items-center">
+                            <div class="location">
+                                <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                            </div>
+                            <div class="location">
+                                <p> <i class="fa fa-clock-o"></i> Part-time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jobs_right">
+                    <div class="apply_now">
+                        <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                        <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                    </div>
+                    <div class="date">
+                        <p>Date line: 31 Jan 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+
+    
+</div>           
+</div> 
+</div>          
+        
+    
+                    <!-- Pagination -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="pagination_wrap">
+            <ul id="pagination">
+                <!-- Previous Page Link -->
+                <li><a href="#" onclick="previousPage()"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path></svg></a></li>
+                <!-- Page Links -->
+                <li><a href="#" onclick="showPage(1)"><span>01</span></a></li>
+                <li><a href="#" onclick="showPage(2)"><span>02</span></a></li>
+                <li><a href="#" onclick="showPage(3)"><span>03</span></a></li>
+                <!-- Add more pagination links as needed -->
+                <!-- Next Page Link -->
+                <li><a href="#" onclick="nextPage()"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"></path></svg></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer class="site-footer">
+
+        <a href="#top" class="smoothscroll scroll-top">
+          <span class="icon-keyboard_arrow_up"></span>
+        </a>
+  
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Search Trending</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Web Designer</a></li>
+                <li><a href="#">Graphic Designer</a></li>
+                <li><a href="#">Web Developer Intern</a></li>
+                <li><a href="#">Python Handler</a></li>
+                <li><a href="#">Backend Developer</a></li>
+                <li><a href="#">Marketing Manager</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Quick Links</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/">Search Jobs</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Support</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Contact Us</h3>
+              <div class="footer-social">
+                <a href="https://www.facebook.com/example"><span class="icon-facebook"></span></a>
+                <a href="https://twitter.com/example"><span class="icon-twitter"></span></a>
+                <a href="https://www.instagram.com/company/example"><span class="icon-instagram"></span></a>
+                <a href="https://www.linkedin.com/company/example"><span class="icon-linkedin"></span></a>
+                
+              </div>
+              <ul class="list-unstyled">
+              <li>Email: <a href="mailto:info@careerladder.com">info@careerladder.com</a></li>
+              <li>Phone: +94112858585</li>
+              <li>Fax: +94112858585</li>
+            </ul>
+            </div>
+          </div>
+  
+          <div class="row text-center">
+            <div class="col-12">
+              <p class="copyright"><small>
+                
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> Career Ladder Website All rights reserved..! 
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+    </div>
+  
+   
+  
+    
+  
+
+  
+  
+  
+  
+      
+ 
+    
+
+
+
+
+
+
+
+
+    <!-- SCRIPTS -->
+
+    <script src="../jobassests/js/bootstrap.bundle.min.js"></script>
+    <script src="../jobassests/js/isotope.pkgd.min.js"></script>
+    <script src="../jobassests/js/stickyfill.min.js"></script>
+    <script src="../jobassests/js/jquery.fancybox.min.js"></script>
+    <script src="../jobassests/js/jquery.easing.1.3.js"></script>
+    
+    <script src="../jobassests/js/jquery.waypoints.min.js"></script>
+    <script src="../jobassests/js/jquery.animateNumber.min.js"></script>
+    <script src="../jobassests/js/owl.carousel.min.js"></script>
+    
+    <script src="../jobassests/js/bootstrap-select.min.js"></script>
+    
+    <script src="../jobassests/js/custom.js"></script>
+   
+
+    
+
+<!-- Template Javascript -->
+<script src="/public/js/main.js"></script>
+<script>
+    $(function() {
+        $("#slider-range").slider({
+            range: true,
+            min: 0,
+            max: 24600,
+            values: [750, 24600 ],
+            slide: function(event, ui) {
+                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+        });
+        $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+            " - $" + $("#slider-range").slider("values", 1));
+    });
+    </script>
+ <script>function filterJobs() {
+    const keyword = document.getElementById('searchKeyword').value.toLowerCase();
+    const location = document.getElementById('locationFilter').value;
+    const category = document.getElementById('categoryFilter').value;
+    const experience = document.getElementById('experienceFilter').value;
+    const jobType = document.getElementById('jobTypeFilter').value;
+    const priceRange = $("#slider-range").slider("values");
+    const jobs = document.querySelectorAll('.job-item');
+
+    jobs.forEach(job => {
+        const jobTitle = job.querySelector('h4').textContent.toLowerCase();
+        const jobLocation = job.getAttribute('data-location');
+        const jobCategory = job.getAttribute('data-category');
+        const jobExperience = job.getAttribute('data-experience');
+        const jobTypeAttr = job.getAttribute('data-job-type');
+        const jobPrice = parseInt(job.getAttribute('data-price'), 10);
+        let isVisible = true;
+
+        if (keyword && !jobTitle.includes(keyword)) {
+            isVisible = false;
+        }
+        if (location && location !== 'Location' && jobLocation !== location) {
+            isVisible = false;
+        }
+        if (category && category !== 'Select Category' && jobCategory !== category) {
+            isVisible = false;
+        }
+        if (experience && experience !== 'Experience' && jobExperience !== experience) {
+            isVisible = false;
+        }
+        if (jobType && jobType !== 'Job type' && jobTypeAttr !== jobType) {
+            isVisible = false;
+        }
+
+        if (isVisible) {
+            job.style.display = 'flex';
+        } else {
+            job.style.display = 'none';
+        }
+    });
+}
+</script>
+
+<script>
+    // Variable to keep track of the current page
+var currentPage = 1;
+
+// Function to show/hide content based on page number
+function showPage(pageNumber) {
+    // Hide all content containers
+    document.querySelector(".job_lists").style.display = "none";
+    document.querySelector(".slider_container").style.display = "none";
+
+    // Show content based on page number
+    if (pageNumber === 1) {
+        document.querySelector(".job_lists").style.display = "block";
+    } else if (pageNumber === 2) {
+        document.querySelector(".slider_container").style.display = "block";
+    }
+    // Add more conditions for additional pages as needed
+
+    // Update the current page
+    currentPage = pageNumber;
+
+    // Update pagination active state
+    updatePagination();
+}
+
+// Function to navigate to the previous page
+function previousPage() {
+    if (currentPage > 1) {
+        showPage(currentPage - 1);
+    }
+}
+
+// Function to navigate to the next page
+function nextPage() {
+    if (currentPage < 3) { // Update this condition if you have more pages
+        showPage(currentPage + 1);
+    }
+}
+
+// Function to update the pagination active state
+function updatePagination() {
+    var paginationLinks = document.querySelectorAll("#pagination li a span");
+    paginationLinks.forEach(function(link, index) {
+        if (index + 1 === currentPage) {
+            link.parentElement.classList.add("active");
+        } else {
+            link.parentElement.classList.remove("active");
+        }
+    });
+}
+
+// Initialize the first page
+showPage(1);
+
+   
+    </script>
+
+
+
+    
+
+
+
+  </body>
+
+  
+</html>

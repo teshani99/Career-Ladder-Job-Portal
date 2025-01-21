@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Career Ladder Website</title>
+    <link rel="stylesheet" href="/contact.css">
+    <link rel="stylesheet" href="../jobassests/css/style.css">  
+
+    <link rel="stylesheet" href="../jobassests/css/custom-bs.css">
+    <link rel="stylesheet" href="../jobassests/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../jobassests/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../jobassests/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../jobassests/fonts/line-icons/style.css">
+    <link rel="stylesheet" href="../jobassests/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../jobassests/css/animate.min.css">
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables.bootstrap4.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="site-logo col-6"><a href="/">Career Ladder</a></div>
+  
+            <nav class="mx-auto site-navigation">
+              <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/profile">Profile</a></li>
+              
+                
+                <li><a href="/bloguser">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                
+              </ul>
+            </nav>
+            
+            <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+              <div class="ml-auto">
+            
+                <a href="/BecomeCompany" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span
+                  class="mr-2 icon-add"></span>Post a Job</a>
+                  
+                  <% if (isAuthenticated) { %>
+                  <a href="/logout" class="btn btn-custom border-width-2 d-none d-lg-inline-block"
+                    style="background-color: rgb(51, 61, 123) !important;">
+                    <span class="mr-2 icon-lock_open"></span>Logout
+                  </a>
+                  <% } else { %>
+                    <a href="/login" class="btn btn-custom border-width-2 d-none d-lg-inline-block"
+                    style="background-color: rgb(51, 61, 123) !important;">
+                    <span class="mr-2 icon-lock_outline"></span>Login
+                    </a>
+                    <% } %>
+                  <a href="/notifications" class="btn btn-custom border-width-2 d-none d-lg-inline-block" style="background-color: rgb(220, 221, 226) !important; color: black;">
+                  <span class="icon-bell" style="color: darkblue;"></span>
+                </a>
+                </div>
+              <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+            </div>
+  
+          </div>
+        </div>
+      </header>
+      
+
+    
+    <main>
+        <section class="contacttopic" style="background-image: url('../jobassests/images/contactformbackground.avif');">
+            <h1>Contact Us</h1>
+        
+        <section id="contact" class="contact-container" >
+           
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><i class="fas fa-envelope"></i> Email: info@careerladder.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +94112858585</p>
+                <p><i class="fas fa-fax"></i> Fax: +94112858585</p>
+                <div class="social-links">
+                    <h3>Connect with us:</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/example" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/example" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/company/example" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/example" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Send us a message</h2>
+                <form action="/submit_contact_form" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+           
+        </section>
+        <div class="contact-msg">
+            <p>Need assistance? Contact us through the form or reach out via phone or email. We're here to help you!</p>
+        </div>  
+        </section>
+        
+    </main>
+     
+    <footer class="site-footer">
+
+        <a href="#top" class="smoothscroll scroll-top">
+          <span class="icon-keyboard_arrow_up"></span>
+        </a>
+  
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Search Trending</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Web Designer</a></li>
+                <li><a href="#">Graphic Designer</a></li>
+                <li><a href="#">Web Developer Intern</a></li>
+                <li><a href="#">Python Handler</a></li>
+                <li><a href="#">Backend Developer</a></li>
+                <li><a href="#">Marketing Manager</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Quick Links</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/">Search Jobs</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Support</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Contact Us</h3>
+              <div class="footer-social">
+                <a href="https://www.facebook.com/example"><span class="icon-facebook"></span></a>
+                <a href="https://twitter.com/example"><span class="icon-twitter"></span></a>
+                <a href="https://www.instagram.com/company/example"><span class="icon-instagram"></span></a>
+                <a href="https://www.linkedin.com/company/example"><span class="icon-linkedin"></span></a>
+                
+              </div>
+              <ul class="list-unstyled">
+              <li>Email: <a href="mailto:info@careerladder.com">info@careerladder.com</a></li>
+              <li>Phone: +94112858585</li>
+              <li>Fax: +94112858585</li>
+            </ul>
+            </div>
+          </div>
+  
+          <div class="row text-center">
+            <div class="col-12">
+              <p class="copyright"><small>
+                
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> Career Ladder Website All rights reserved..! 
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

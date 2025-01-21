@@ -1,0 +1,239 @@
+<!-- your_view.ejs -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="/table.css">
+  <title>Candidates</title>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  <link href="../css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link rel="../stylesheet" type="text/css" href="css/design.css">
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery.dataTables.min.js"></script>
+  <script src="../js/dataTables.bootstrap4.min.js"></script>
+
+<style>
+      body{
+    background-color: #d8e8f9;
+    
+    }
+
+    th:nth-child(1) {
+    background-color: #819cd5;
+}
+th:nth-child(2) {
+    background-color: #819cd5;
+}
+th:nth-child(3) {
+    background-color: #819cd5;
+}
+th:nth-child(4) {
+    background-color: #819cd5;
+}
+th:nth-child(6) {
+    background-color: #819cd5;
+}
+th:nth-child(7) {
+    background-color: #819cd5;
+}
+th:nth-child(5) {
+    background-color: #819cd5;
+}
+th:nth-child(8) {
+    background-color: #819cd5;
+}
+</style>
+  
+</head>
+
+<body>
+  <nav class="py-1 navbar navbar-expand-lg" style="background-color: #666b76 !important;">
+        <a class="navbar-brand text-white ml-4" href="/"><b>Job Candidates</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <div class="mr-5">
+        <ul class="navbar-nav mr-auto mr-0">
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/"><b>home</b></a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <% if (postedjobs.length> 0) { %>
+    <div class="container mt-5" >
+      <div class="col-sm-12">
+        <table class="table table-bordered dataTable no-footer" id="dataTable" width="110%" cellspacing="0" role="grid"
+          aria-describedby="dataTable_info" style="width: 110%;">
+          <thead>
+            <tr role="row">
+              <th>ProfilePic</th>
+              <th>Full Name</th>
+              <th>Address</th>
+              <th>Applied Date</th>
+              <th>Experience</th>
+              <th>Status</th>
+              <th>Operations</th>
+              <th>Select</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% postedjobs.forEach(data=> { %>
+              <tr role="row" class="even">
+                <td>
+                  <% if (data.userProfile && data.userProfile.profilePic) { %>
+                    <img src="/upload/<%= data.userProfile.profilePic %>" alt="Profile Pic"
+                      style="max-width: 50px; max-height: 100px;">
+                    <% } else { %>
+                      No Photo
+                      <% } %>
+                </td>
+                <td><b></b>
+                  <%= data.userProfile ? data.userProfile.fullName : "Unknown" %>
+                </td>
+                <td><b></b>
+                  <%= data.userProfile ? data.userProfile.address : "Unknown" %>
+                </td>
+                <td><b></b>
+                  <%= data.createdAt.toISOString().split('T')[0] %>
+                </td>
+                <td><b></b>
+                  <%= data.experience %> Years
+                </td>
+                <td>
+                  <% if (data.selected === 1) { %>
+                    <span style="color: white; background-color: green; padding: 5px; border-radius: 3px;">Selected</span>
+                  <% } else if (data.selected === 2) { %>
+                    <span style="color: white; background-color: red; padding: 5px; border-radius: 3px;">Not Selected</span>
+                  <% } else { %>
+                    <span style="color: white; background-color: orange; padding: 5px; border-radius: 3px;">Processing</span>
+                  <% } %>
+                </td>
+                
+                <td style="display: flex; flex-direction: column; align-items: center;">
+                  <div class="btn-group" role="group" aria-label="Operations" style="margin-bottom: 5px;">
+                    <a class="btn btn-primary"
+                      href="/viewprofile/<%= data.userProfile ? data.userProfile._id : '#' %>">View Profile</a>
+                  </div>
+                 
+                  <form style="display: inline;" action="/delete/<%= data._id %>" 
+                    method="POST" class="delete-form">
+                    <button style="cursor: pointer;" type="submit" class="btn btn-danger">Remove</button>
+                  </form>
+
+           
+            
+                       
+
+             
+
+
+
+                </td>
+             
+
+                  <td>
+                    <div style="display: flex; justify-content: center; gap: 10px;">
+                      <form action="/selected/<%= data._id %>" method="POST" class="select-form">
+                        <button style="cursor: pointer; background-color: green; color: white; border: none; padding: 5px 10px; border-radius: 3px;" type="submit">
+                          Select
+                        </button>
+                      </form>
+                  
+                      <form action="/notselected/<%= data._id %>" method="POST" class="notselect-form">
+                        <button style="cursor: pointer; background-color: red; color: white; border: none; padding: 5px 10px; border-radius: 3px;" type="submit">
+                          Not Select
+                        </button>
+                      </form>
+                    </div>
+                  </td>
+                  
+               
+              </tr>
+              <% }); %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <% } else { %>
+      <p>There are no applied jobs.</p>
+      <% } %>
+
+        <script src="js/employee.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+          function confirmAction(action) {
+              return confirm(`Are you sure you want to ${action}?`);
+          }
+      </script>
+      
+
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            var deleteForms = document.querySelectorAll(".delete-form");
+            deleteForms.forEach(function (form) {
+              form.addEventListener("submit", function (event) {
+                var confirmDelete = confirm("Are you sure you want to remove this candidate?");
+                if (!confirmDelete) {
+                  event.preventDefault();
+                }
+              });
+            });
+          });
+        </script>
+               <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  var deleteForms = document.querySelectorAll(".notselect-form");
+                  deleteForms.forEach(function (form) {
+                    form.addEventListener("submit", function (event) {
+                      var confirmDelete = confirm("Are you sure you want to notselect this candidate?");
+                      if (!confirmDelete) {
+                        event.preventDefault();
+                      }
+                    });
+                  });
+                });
+              </script>
+                     <script>
+                      document.addEventListener("DOMContentLoaded", function () {
+                        var deleteForms = document.querySelectorAll(".select-form");
+                        deleteForms.forEach(function (form) {
+                          form.addEventListener("submit", function (event) {
+                            var confirmDelete = confirm("Are you sure you want to select this candidate?");
+                            if (!confirmDelete) {
+                              event.preventDefault();
+                            }
+                          });
+                        });
+                      });
+                    </script>
+        <script>
+          $(document).ready(function () {
+            $('#dataTable').DataTable({
+              paging: true,
+              searching: true,
+              ordering: true,
+              columnDefs: [
+                { orderable: true, targets: [0, 1, 2, 3, 4, 5] }
+              ]
+            });
+          });
+
+          function updateModalImage(imageUrl) {
+            var modalImage = document.getElementById('modalImage');
+            modalImage.src = imageUrl;
+          }
+        </script>
+</body>
+
+</html>

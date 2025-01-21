@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Career Ladder Website</title>
+    <link rel="stylesheet" href="../about.css">
+    <link rel="stylesheet" href="../jobassests/css/style.css">  
+
+    <link rel="stylesheet" href="../jobassests/css/custom-bs.css">
+    <link rel="stylesheet" href="../jobassests/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../jobassests/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../jobassests/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../jobassests/fonts/line-icons/style.css">
+    <link rel="stylesheet" href="../jobassests/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../jobassests/css/animate.min.css">
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables.bootstrap4.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-FyBUfV8lQvkC8j8j6tpQ6uEHz7lvy10tHY/swhaBxv9AahTJzJSHmXmPLy0Oy12XGc9H0XkVNZWBcuU+3s7ieQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+		
+
+
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="site-logo col-6"><a href="/">Career Ladder</a></div>
+  
+            <nav class="mx-auto site-navigation">
+              <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/profile">Profile</a></li>
+             
+                
+                <li><a href="/bloguser">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                
+              </ul>
+            </nav>
+            
+            <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+				<div class="ml-auto">
+            
+					<a href="/BecomeCompany" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span
+						class="mr-2 icon-add"></span>Post a Job</a>
+					  
+					  <% if (isAuthenticated) { %>
+						<a href="/logout" class="btn btn-custom border-width-2 d-none d-lg-inline-block"
+						  style="background-color: rgb(51, 61, 123) !important;">
+						  <span class="mr-2 icon-lock_open"></span>Logout
+						</a>
+						<% } else { %>
+						  <a href="/login" class="btn btn-custom border-width-2 d-none d-lg-inline-block"
+							style="background-color: rgb(51, 61, 123) !important;">
+							<span class="mr-2 icon-lock_outline"></span>Login
+						  </a>
+						  <% } %>
+						<a href="/notifications" class="btn btn-custom border-width-2 d-none d-lg-inline-block" style="background-color: rgb(220, 221, 226) !important; color: black;">
+						<span class="icon-bell" style="color: darkblue;"></span>
+					</a>
+				  </div>
+              <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+            </div>
+  
+          </div>
+        </div>
+      </header>
+      
+
+    
+    <main>
+        <section class="abouttopic">
+            <h1>About Us</h1>
+        
+        
+           
+            <!--about-history start-->
+		<div class="about-history">
+			<div class="container">
+				<div class="about-history-content">
+
+					<div class="row">
+
+						<div class="col-md-5 col-sm-12">
+							<div class="single-about-history">
+								<div class="about-history-img">
+									<img src="../jobassests/images/about1.jpg" alt="about">
+								</div><!--/.about-history-img-->
+							</div><!--/.single-about-history-->
+						</div><!--/.col-->
+
+						<div class="col-md-offset-1 col-md-6 col-sm-12">
+							<div class="single-about-history">
+								<div class="about-history-txt">
+									<h2>our history</h2>
+									<p>
+										Career Ladder, launched in 2016, is a pioneering job search and posting platform dedicated to connecting talent with opportunities worldwide.
+									</p>
+
+									<div class="main-timeline">
+
+										<div class="row">
+											<div class="col-md-2 col-sm-2">
+												<div class="experience-time">
+													<h3>2016</h3>
+												</div><!--/.experience-time-->
+											</div><!--/.col-->
+											<div class="col-md-10 col-sm-10">
+												<div class="timeline">
+													
+													<div class="timeline-content">
+														<h4 class="title"> <span><i class="fa fa-circle" aria-hidden="true"></i></span></h4>
+														
+														<ul class="description">
+															Career Ladder emerges as a user-friendly interface, offering a streamlined approach to job searching and posting. It quickly gains traction among early adopters, establishing its presence in the competitive market.
+
+														</ul>
+													</div><!--/.timeline-content-->
+												</div><!--/.timeline-->
+											</div><!--/.col-->
+										</div><!--/.row-->
+
+										<div class="row">
+											<div class="col-md-2 col-sm-2">
+												<div class="experience-time">
+													<h3>2019</h3>
+												</div><!--/.experience-time-->
+											</div><!--/.col-->
+											<div class="col-md-10 col-sm-10">
+												<div class="timeline">
+													
+													<div class="timeline-content">
+														<h4 class="title"> <span><i class="fa fa-circle" aria-hidden="true"></i></span></h4>
+														
+														<ul class="description">
+															With growing demand, Career Ladder expands its features, introducing advanced search filters and employer profiles. 
+														</ul>
+													</div><!--/.timeline-content-->
+												</div><!--/.timeline-->
+											</div><!--/.col-->
+										</div><!--/.row-->
+
+										<div class="row">
+											<div class="col-md-2 col-sm-2">
+												<div class="experience-time">
+													<h3>2021</h3>
+												</div><!--/.experience-time-->
+											</div><!--/.col-->
+											<div class="col-md-10 col-sm-10">
+												<div class="timeline">
+													
+													<div class="timeline-content">
+														<h4 class="title"> <span><i class="fa fa-circle" aria-hidden="true"></i></span></h4>
+														
+														<ul class="description">
+															Embracing technological advancements, Career Ladder integrates mobile compatibility and introduces responsive design, ensuring accessibility on all devices. 
+
+														</ul>
+													</div><!--/.timeline-content-->
+												</div><!--/.timeline-->
+											</div><!--/.col-->
+										</div><!--/.row-->
+
+										<div class="row">
+											<div class="col-md-2 col-sm-2">
+												<div class="experience-time">
+													<h3>2024</h3>
+												</div><!--/.experience-time-->
+											</div><!--/.col-->
+											<div class="col-md-10 col-sm-10">
+												<div class="timeline">
+													
+													<div class="timeline-content">
+														<h4 class="title"> <span><i class="fa fa-circle" aria-hidden="true"></i></span></h4>
+														
+														<ul class="description">
+															Leveraging AI and machine learning, Career Ladder revolutionizes the job search experience, offering personalized recommendations and predictive analytics. 
+														</ul>
+													</div><!--/.timeline-content-->
+												</div><!--/.timeline-->
+											</div><!--/.col-->
+										</div><!--/.row-->
+									</div><!--.main-timeline-->
+								</div><!--/.about-history-txt-->
+							</div><!--/.single-about-history-->
+						</div><!--/.col-->
+
+					</div><!--/.row-->
+					<div class="row">
+
+						
+
+							<div class="col-md-6 col-sm-12">
+								<div class="single-about-history">
+									<div class="about-history-txt">
+										<h2>vision and mission</h2>
+										<p>
+											Career Ladder, founded in 2016, is a user-friendly online platform connecting job seekers with global employment opportunities.
+										</p>
+
+										<div class="main-timeline  xtra-timeline">
+
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="timeline timeline-ml-20">
+														
+														<div class="timeline-content">
+															<h4 class="title"> <span><i class="fa fa-star" aria-hidden="true"></i></span></h4>
+															
+															<ul class="description">
+																"At Career Ladder, our vision is to revolutionize the global job market by empowering individuals to discover and pursue their dream careers with confidence and ease. We strive to create a world where every talent finds its perfect match."
+															</ul>
+														</div><!--/.timeline-content-->
+													</div><!--/.timeline-->
+												</div><!--/.col-->
+											</div><!--/.row-->
+
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="timeline timeline-ml-20">
+														
+														<div class="timeline-content">
+															<h4 class="title"> <span><i class="fa fa-star" aria-hidden="true"></i></span></h4>
+															
+															<ul class="description">
+																"Our mission at Career Ladder is to provide a seamless and intuitive platform that connects job seekers with opportunities worldwide. We are committed to leveraging technology and innovation to simplify the job search process."
+															</ul>
+														</div><!--/.timeline-content-->
+													</div><!--/.timeline-->
+												</div><!--/.col-->
+											</div><!--/.row-->
+
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="timeline timeline-ml-20">
+														
+														<div class="timeline-content">
+															<h4 class="title"> <span><i class="fa fa-star" aria-hidden="true"></i></span></h4>
+															
+															<ul class="description">
+																"Our platform offers intuitive job search tools, personalized recommendations, and seamless application tracking for job seekers. For employers, we offer comprehensive recruitment solutions, including employer profiles and candidate management tools."
+																</ul>
+														</div><!--/.timeline-content-->
+													</div><!--/.timeline-->
+												</div><!--/.col-->
+											</div><!--/.row-->
+										</div><!--.main-timeline-->
+									</div><!--/.about-history-txt-->
+								</div><!--/.single-about-history-->
+							</div><!--/.col-->
+							
+
+							
+
+							<div class="col-md-offset-1 col-md-5 col-sm-12">
+								<div class="single-about-history">
+									<div class="about-history-img">
+										<img src="../jobassests/images/about2.jpg" alt="about">
+									</div><!--/.about-history-img-->
+								</div><!--/.single-about-history-->
+							</div><!--/.col-->
+						<!--/.about-vission-content-->
+					</div><!--/.row-->
+				</div><!--/.about-history-content-->
+			</div><!--/.container-->
+
+		</div><!--/.about-history-->
+		<!--about-history end-->
+
+           
+        </section>
+        <!--whatwedo section -->
+		<section  class="we-do">
+			<div class="container">
+				<div class="we-do-details">
+					<div class="section-header text-center">
+						<h2>What We Do</h2>
+						<p>
+							"Simplifying job search and recruitment. Connecting talent with opportunities. Empowering individuals and businesses for success in the workforce."
+						</p>
+					</div><!--/.section-header-->
+					<div class="we-do-carousel">
+						<div class="row">
+							<div class="col-sm-4 col-xs-12">
+								<div class="single-we-do-box text-center">
+									<div class="we-do-description">
+										<div class="we-do-info">
+											<div class="we-do-img">
+												<img src="../jobassests/images/wedo1.jpg" alt="image of consultency" />
+											</div><!--/.we-do-img-->
+											<div class="we-do-topics">
+												<h2>
+													<a href="#">
+														Job Search Simplification
+													</a>
+												</h2>
+											</div><!--/.we-do-topics-->
+										</div><!--/.we-do-info-->
+										<div class="we-do-comment">
+											<p>
+												Streamlining the job search process with success stories.
+
+											</p>
+										</div><!--/.we-do-comment-->
+									</div><!--/.we-do-description-->
+								</div><!--/.single-we-do-box-->
+							</div><!--/.col-->
+							<div class="col-sm-4 col-xs-12">
+								<div class="single-we-do-box text-center">
+									<div class="we-do-description">
+										<div class="we-do-info">
+											<div class="we-do-img">
+												<img src="../jobassests/images/wedo2.jpg" alt="image of business" />
+											</div><!--/.we-do-img-->
+											<div class="we-do-topics">
+												<h2>
+													<a href="#">
+														Talent Connection
+													</a>
+												</h2>
+											</div><!--/.we-do-topics-->
+										</div><!--/.we-do-info-->
+										<div class="we-do-comment">
+											<p>
+												Connecting individuals with relevant opportunities.
+											</p>
+										</div><!--/.we-do-comment-->
+									</div><!--/.we-do-description-->
+								</div><!--/.single-we-do-box-->
+							</div><!--/.col-->
+							<div class="col-sm-4 col-xs-12">
+								<div class="single-we-do-box text-center">
+									<div class="we-do-description">
+										<div class="we-do-info">
+											<div class="we-do-img">
+												<img src="../jobassests/images/wedo3.jpg" alt="image of support" />
+											</div><!--/.we-do-img-->
+											<div class="we-do-topics">
+												<h2>
+													<a href="#">
+														Empowerment Solutions
+													</a>
+
+												</h2>
+											</div><!--/.we-do-topics-->
+										</div><!--/.we-do-info-->
+										<div class="we-do-comment">
+											<p>
+												Providing tools for success in the job market.
+											</p>
+										</div><!--/.we-do-comment-->
+									</div><!--/.we-do-description-->
+								</div><!--/.single-we-do-box-->
+							</div><!--/.col-->
+						</div><!--/.row-->
+					</div><!--/.we-do-carousel-->
+				</div><!--/.we-do-details-->
+			</div><!--/.container-->
+
+		</section><!--/.we-do-->
+		<!--we-do end-->
+		
+        
+        
+    </main>
+     
+    <footer class="site-footer">
+
+        <a href="#top" class="smoothscroll scroll-top">
+          <span class="icon-keyboard_arrow_up"></span>
+        </a>
+  
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Search Trending</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Web Designer</a></li>
+                <li><a href="#">Graphic Designer</a></li>
+                <li><a href="#">Web Developer Intern</a></li>
+                <li><a href="#">Python Handler</a></li>
+                <li><a href="#">Backend Developer</a></li>
+                <li><a href="#">Marketing Manager</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Quick Links</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/">Search Jobs</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Support</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h3>Contact Us</h3>
+              <div class="footer-social">
+                <a href="https://www.facebook.com/example"><span class="icon-facebook"></span></a>
+                <a href="https://twitter.com/example"><span class="icon-twitter"></span></a>
+                <a href="https://www.instagram.com/company/example"><span class="icon-instagram"></span></a>
+                <a href="https://www.linkedin.com/company/example"><span class="icon-linkedin"></span></a>
+                
+              </div>
+              <ul class="list-unstyled">
+              <li>Email: <a href="mailto:info@careerladder.com">info@careerladder.com</a></li>
+              <li>Phone: +94112858585</li>
+              <li>Fax: +94112858585</li>
+            </ul>
+            </div>
+          </div>
+  
+          <div class="row text-center">
+            <div class="col-12">
+              <p class="copyright"><small>
+                
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> Career Ladder Website All rights reserved..! 
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

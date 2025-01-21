@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>User Profile</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="../profile/img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="../profile/css/bootstrap-profiles.min.css" />
+</head>
+
+<body>
+  <!-- Start your project here-->
+  <section style="background-color: #eee;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col">
+          <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <% if (empData.length > 0) { %>
+        <% empData.forEach(data => { %>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card mb-4">
+                <div class="card-body text-center">
+                  <% if (data.profilePic) { %>
+                    <img src="/upload/<%= data.profilePic %>" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                  <% } else { %>
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+                  <% } %>
+                  <h5 class="my-3"><%= data.fullName %></h5>
+                  <!-- <p class="text-muted mb-1"><%= data.jobtitle || 'N/A' %></p>
+                  <p class="text-muted mb-4"><%= data.location || 'N/A' %></p> -->
+                  <div class="d-flex justify-content-center mb-2">
+                    
+                    <!-- <button type="button" class="btn btn-outline-primary ms-1">Message</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Full Name</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0"><%= data.fullName %></p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Age</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0"><%= data.age || 'N/A' %></p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Date of Birth</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0"><%= data.dob.toISOString().split('T')[0] %></p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Email</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0"><%= data.email || 'N/A' %></p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">NIC</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0"><%= data.nic || 'N/A' %></p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Civil Status</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0"><%= data.civilStatus || 'N/A' %></p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Gender</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0"><%= data.gender || 'N/A' %></p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Address</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0"><%= data.address || 'N/A' %></p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Mobile No</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0"><%= data.mobileNo || 'N/A' %></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <p>No data found for this user.</p>
+      <% } %>
+    </div>
+  </section>
+  <!-- End your project here-->
+
+  <!-- MDB -->
+  <script type="text/javascript" src="../profile/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
+</html>

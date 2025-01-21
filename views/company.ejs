@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Career Ladder Official Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <link rel="shortcut icon" href="ftco-32x32.png">
+
+  <link rel="stylesheet" href="../jobassests/css/custom-bs.css">
+  <link rel="stylesheet" href="../jobassests/css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="../jobassests/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="../jobassests/fonts/icomoon/style.css">
+  <link rel="stylesheet" href="../jobassests/fonts/line-icons/style.css">
+  <link rel="stylesheet" href="../jobassests/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../jobassests/css/animate.min.css">
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery.dataTables.min.js"></script>
+  <script src="../js/dataTables.bootstrap4.min.js"></script>
+
+  <style>
+    .dataTables_wrapper .dataTables_filter {
+      float: right;
+    }
+
+    .dataTables_wrapper .dataTables_paginate {
+      float: right;
+    }
+
+    table,
+    th,
+    td {
+      border: none;
+    }
+    
+  .site-logo a {
+    color: white !important; /* Set the text color to white */
+    text-decoration: none;  /* Remove underline */
+  }
+
+  .site-logo a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+  }
+
+
+  /* Apply white color to all links in the navigation */
+  .site-navigation .nav-link {
+    color: white !important; /* Set the text color to white */
+  }
+
+  /* Optional: Change link color on hover */
+  .site-navigation .nav-link:hover {
+    color: lightgray; /* Change color when hovered */
+  }
+
+ /* Modify the white button */
+ .btn-white {
+    background-color: white;      /* Set background to white */
+    color: #666b76;               /* Text color for contrast */
+    border: 2px solid #666b76;    /* Border color */
+  }
+
+  /* Optional: Add hover effect */
+  .btn-white:hover {
+    background-color: #666b76;    /* Background changes on hover */
+    color: white;                 /* Text turns white on hover */
+  }
+
+  </style>
+
+
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="../jobassests/css/style.css">
+</head>
+
+<body id="top">
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6"><a href="/">Career Ladder</a></div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+              <li><a href="/" class="nav-link active">Home</a></li>
+              <li><a href="/about"class="nav-link active">About</a></li>
+              <li><a href="/companyprofile"class="nav-link active">Profile</a></li>
+              <li><a href="/companylisting"class="nav-link active">Posted Jobs</a></li>
+              <!-- <li><a href="/blog">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li> -->
+              <li class="d-lg-none"><a href="/becomeCompany"><span class="mr-2">+</span> Post a Job</a></li>
+            </ul>
+          </nav>
+          
+
+          <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+            <div class="ml-auto">
+              <a href="/comapypostjob" class="btn btn-white border-width-2 d-none d-lg-inline-block">
+                <span class="mr-2 icon-add"></span>Post a Job
+              </a>
+              
+
+              <% if (isAuthenticated) { %>
+                <a href="/logout" class="btn btn-custom border-width-2 d-none d-lg-inline-block"
+                  style="background-color: rgb(86, 6, 6) !important;">
+                  <span class="mr-2 icon-lock_open"></span><b>Logout</b>
+                </a>
+                <% } else { %>
+                  <a href="/login" class="btn btn-custom border-width-2 d-none d-lg-inline-block"
+                    style="background-color: rgb(84, 240, 70) !important;">
+                    <span class="mr-2 icon-lock_outline"></span>Login
+                  </a>
+                  <% } %>
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span
+                class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="home-section section-hero overlay bg-image"
+      style="background-image: url('../jobassests/images/avif2.avif');" id="home-section">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-12">
+            <div class="mb-5 text-center">
+              <h1 class="text-white font-weight-bold">"Start where you are. Use what you have. Do what you can.."</h1>
+              <p>Unlock your potential! Find your dream job today. From entry-level positions to executive roles, start
+                your journey to success with us. Join now and take the next step in your career!</p>
+            </div>
+
+            <section class="py-5 bg-image fixed overlay" style="background-color: black;">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-8">
+                    <h2 class="text-white">Looking For A Job?</h2>
+                    <p class="mb-0 text-white lead">"Explore endless diverse opportunities and take the next step in
+                      your career journey. Join us today!"</p>
+                  </div>
+                  <div class="col-md-3 ml-auto">
+
+
+                    <% if (isAuthenticated) { %>
+                      
+                      
+                      <% } else { %>
+                        <a href="/register" class="btn btn-dark btn-block btn-lg">Sign Up</a>
+                        <% } %>
+                 
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <a href="#next" class="scroll-button smoothscroll">
+        <span class=" icon-keyboard_arrow_down"></span>
+      </a>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="bg-light pt-5 testimony-full">
+
+      <div class="owl-carousel single-carousel">
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 align-self-center text-center text-lg-left">
+              <blockquote>
+                <p>&ldquo;CareerLadder turned my job search into a breeze! The platform's intuitive design and
+                  customized job listings saved me hours of scrolling. Secured interviews with top companies. Thrilled
+                  with the results!&rdquo;</p>
+                <p><cite> &mdash; Prageeth Wanigasekara </cite></p>
+              </blockquote>
+            </div>
+            <div class="col-lg-6 align-self-end text-center text-lg-right">
+              <img src="../jobassests/images/person_transparent_2.png" alt="Image" class="img-fluid mb-0">
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 align-self-center text-center text-lg-left">
+              <blockquote>
+                <p>&ldquo;Skeptical at first, but CareerLadder exceeded expectations. Navigating the job market was
+                  daunting, but their platform made it manageable. Found multiple promising opportunities quickly.
+                  Impressed!
+
+                  &rdquo;</p>
+                <p><cite> &mdash;Junette Calorasa </cite></p>
+              </blockquote>
+            </div>
+            <div class="col-lg-6 align-self-end text-center text-lg-right">
+              <img src="../jobassests/images/person_transparent.png" alt="Image" class="img-fluid mb-0">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <footer class="site-footer">
+
+      <a href="#top" class="smoothscroll scroll-top">
+        <span class="icon-keyboard_arrow_up"></span>
+      </a>
+
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Search Trending</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Web Designer</a></li>
+              <li><a href="#">Graphic Designer</a></li>
+              <li><a href="#">Web Developer Intern</a></li>
+              <li><a href="#">Python Handler</a></li>
+              <li><a href="#">Backend Developer</a></li>
+              <li><a href="#">Marketing Manager</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Quick Links</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/profile">Profile</a></li>
+              <li><a href="/">Search Jobs</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Support</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Contact Us</h3>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/example"><span class="icon-facebook"></span></a>
+              <a href="https://twitter.com/example"><span class="icon-twitter"></span></a>
+              <a href="https://www.instagram.com/company/example"><span class="icon-instagram"></span></a>
+              <a href="https://www.linkedin.com/company/example"><span class="icon-linkedin"></span></a>
+
+            </div>
+            <ul class="list-unstyled">
+              <li>Email: <a href="mailto:info@careerladder.com">info@careerladder.com</a></li>
+              <li>Phone: +94112858585</li>
+              <li>Fax: +94112858585</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="copyright"><small>
+
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> Career Ladder Website All rights reserved..!
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+
+
+
+  </script>
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+  <!-- SCRIPTS -->
+
+  <script src="../jobassests/js/bootstrap.bundle.min.js"></script>
+  <script src="../jobassests/js/isotope.pkgd.min.js"></script>
+  <script src="../jobassests/js/stickyfill.min.js"></script>
+  <script src="../jobassests/js/jquery.fancybox.min.js"></script>
+  <script src="../jobassests/js/jquery.easing.1.3.js"></script>
+
+  <script src="../jobassests/js/jquery.waypoints.min.js"></script>
+  <script src="../jobassests/js/jquery.animateNumber.min.js"></script>
+  <script src="../jobassests/js/owl.carousel.min.js"></script>
+
+  <script src="../jobassests/js/bootstrap-select.min.js"></script>
+
+  <script src="../jobassests/js/custom.js"></script>
+
+
+
+
+
+
+
+
+
+
+  <script>
+
+
+    $(document).ready(function () {
+      $('#dataTable').DataTable({
+        pageLength: 5,
+        lengthMenu: [[5, 10, 20, -1], [5, 10, 20, 'Todos']],
+        "paging": true,
+        "ordering": true,
+        "searching": true,
+        "info": true,
+        "paging": true,
+
+
+      });
+    });
+
+  </script>
+
+</body>
+
+
+</html>

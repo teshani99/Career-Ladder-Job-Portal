@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Career Ladder Website</title>
+    <link rel="stylesheet" href="/blog.css">
+    <link rel="stylesheet" href="../jobassests/css/style.css">  
+
+    <link rel="stylesheet" href="../jobassests/css/custom-bs.css">
+    <link rel="stylesheet" href="../jobassests/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../jobassests/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../jobassests/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../jobassests/fonts/line-icons/style.css">
+    <link rel="stylesheet" href="../jobassests/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../jobassests/css/animate.min.css">
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.dataTables.min.js"></script>
+    <script src="../js/dataTables.bootstrap4.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
+</head>
+<body>
+   
+ <!-- NAVBAR -->
+ <header class="site-navbar mt-3">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="site-logo col-6"><a href="/home">Career Ladder</a></div>
+
+        <nav class="mx-auto site-navigation">
+          <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+            <li><a href="/" class="nav-link active">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/profile">Profile</a></li>
+     
+            
+            <li><a href="/bloguser">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
+            
+          </ul>
+        </nav>
+        
+        <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+          <div class="ml-auto">
+            
+					<a href="/BecomeCompany" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span
+						class="mr-2 icon-add"></span>Post a Job</a>
+					  
+					  <% if (isAuthenticated) { %>
+						<a href="/logout" class="btn btn-custom border-width-2 d-none d-lg-inline-block"
+						  style="background-color: rgb(51, 61, 123) !important;">
+						  <span class="mr-2 icon-lock_open"></span>Logout
+						</a>
+						<% } else { %>
+						  <a href="/login" class="btn btn-custom border-width-2 d-none d-lg-inline-block"
+							style="background-color: rgb(51, 61, 123) !important;">
+							<span class="mr-2 icon-lock_outline"></span>Login
+						  </a>
+						  <% } %>
+						<a href="/notifications" class="btn btn-custom border-width-2 d-none d-lg-inline-block" style="background-color: rgb(220, 221, 226) !important; color: black;">
+						<span class="icon-bell" style="color: darkblue;"></span>
+					</a>
+				  </div>
+          <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+  
+    <main>
+    
+        <section class="blogtopic" style="background-image: url('../jobassests/images/blogbackground.jpg');">
+            <h1>Blog</h1>
+        
+        <!-- SNEWS BLOG -->
+        
+		<section class="news-single section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-12">
+						<div class="row">
+							
+							<div class="col-12">
+                                <div class="container mt-5" >
+                                    
+                                    <% if (blogs.length === 0) { %>
+                                        <p>No blogs to display.</p>
+                                    <% } else { %>
+                                        <div class="single-main">
+                                            <% blogs.forEach(blog => { %>
+                                                
+                                                    
+                                                       
+                                                            <h1 class="news-title"><%= blog.blogtitle %></h1>
+                                                        
+                                                        <div class="news-head">
+                                                        <img src="/upload/<%= blog.blogimage %>" class="card-img-top" alt="Blog image" >
+                                                    </div>
+                                                    
+                                                        <div class="meta">
+                                                            <div class="meta-left">
+                                                                <span class="author">
+                                                                    <a href="#"><i class="fa fa-user"></i><%= blog.blogauthor %></a>
+                                                                </span>
+                                                                <span class="date">
+                                                                    <i class="fa fa-calendar"></i><%= new Date(blog.blogdate).toLocaleDateString() %>
+                                                                </span>
+                                                                <a href="/blogsuser/<%= blog._id %>" class="btn btn-danger">Read more</a>
+                                                            </div>
+                                                        </div>
+
+                                                    
+                                             
+                                            <% }) %>
+                                        </div>
+                                    <% } %>
+                                </div>
+							  </div>
+
+							
+							
+						</div>
+					</div>
+					<div class="col-lg-4 col-12">
+						<div class="main-sidebar">
+							<!-- Single Widget -->
+							<div class="single-widget search">
+								<div class="form">
+									<input type="email" placeholder="Search Here...">
+									<a class="button" href="#"><i class="fa fa-search"></i></a>
+								</div>
+							</div>
+							<!--/ End Single Widget -->
+							<!-- Single Widget -->
+							<div class="single-widget category">
+								<h3 class="title">Blog Categories</h3>
+								<ul class="categor-list">
+									<li><a href="#">Resume Writing and Optimization</a></li>
+									<li><a href="#">Career Development and Advancement</a></li>
+									<li><a href="#">Industry Insights and Trends</a></li>
+									<li><a href="#">Networking and Personal Branding</a></li>
+									<li><a href="#">Success Stories and Career Journeys</a></li>
+								</ul>
+							</div>
+							<!--/ End Single Widget -->
+							<!-- Single Widget -->
+							<div class="single-widget recent-post">
+								<h3 class="title">Recent post</h3>
+								<!-- Single Post -->
+								<div class="single-post">
+									<div class="image">
+										<img src="../jobassests/images/interviewtipsblog.jpg" alt="#">
+									</div>
+									<div class="content">
+										<h5><a href="#">Interviewer Insights and Perspectives for your dream job</a></h5>
+										<ul class="comment">
+											<li><i class="fa fa-calendar" aria-hidden="true"></i>03rd FEB, 2023</li>
+											<li><i class="fa fa-commenting-o" aria-hidden="true"></i>35</li>
+										</ul>
+									</div>
+								</div>
+								<!-- End Single Post -->
+								<!-- Single Post -->
+								<div class="single-post">
+									<div class="image">
+										<img src="../jobassests/images/profdevblog.jpg" alt="#">
+									</div>
+									<div class="content">
+										<h5><a href="/blog2">Professional Development Resources in building the success</a></h5>
+										<ul class="comment">
+											<li><i class="fa fa-calendar" aria-hidden="true"></i>6th June, 2022</li>
+											<li><i class="fa fa-commenting-o" aria-hidden="true"></i>59</li>
+										</ul>
+									</div>
+								</div>
+								<!-- End Single Post -->
+								<!-- Single Post -->
+								<div class="single-post">
+									<div class="image">
+										<img src="../jobassests/images/personaldevblog.jpg" alt="#">
+									</div>
+									<div class="content">
+										<h5><a href="#">Hire a Branding Consultant With a Similar Aesthetic to Your Own</a></h5>
+										<ul class="comment">
+											<li><i class="fa fa-calendar" aria-hidden="true"></i>12th April, 2023</li>
+											<li><i class="fa fa-commenting-o" aria-hidden="true"></i>44</li>
+										</ul>
+									</div>
+								</div>
+								<!-- End Single Post -->
+							</div>
+							<!--/ End Single Widget -->
+							<!-- Single Widget -->
+							<!--/ End Single Widget -->
+							<!-- Single Widget -->
+							<div class="single-widget side-tags">
+								<h3 class="title">Tags</h3>
+								<ul class="tag">
+									<li><a href="#">business</a></li>
+									<li><a href="#">technology</a></li>
+									<li><a href="#">trending</a></li>
+									<li><a href="#">itindustry</a></li>
+									<li><a href="#">interview</a></li>
+									<li><a href="#">cvtemplates</a></li>
+									<li><a href="#">Digital</a></li>
+									<li><a href="#">Prfessioonal</a></li>
+									<li><a href="#">Management</a></li>
+									<li><a href="#">Guidance</a></li>
+								</ul>
+							</div>
+							<!--/ End Single Widget -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Single News -->
+        </section>
+       
+        </main>
+  
+        <footer class="site-footer">
+
+            <a href="#top" class="smoothscroll scroll-top">
+              <span class="icon-keyboard_arrow_up"></span>
+            </a>
+      
+            <div class="container">
+              <div class="row mb-5">
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                  <h3>Search Trending</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Web Designer</a></li>
+                    <li><a href="#">Graphic Designer</a></li>
+                    <li><a href="#">Web Developer Intern</a></li>
+                    <li><a href="#">Python Handler</a></li>
+                    <li><a href="#">Backend Developer</a></li>
+                    <li><a href="#">Marketing Manager</a></li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                  <h3>Quick Links</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/">Search Jobs</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                  <h3>Support</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                  <h3>Contact Us</h3>
+                  <div class="footer-social">
+                    <a href="https://www.facebook.com/example"><span class="icon-facebook"></span></a>
+                    <a href="https://twitter.com/example"><span class="icon-twitter"></span></a>
+                    <a href="https://www.instagram.com/company/example"><span class="icon-instagram"></span></a>
+                    <a href="https://www.linkedin.com/company/example"><span class="icon-linkedin"></span></a>
+                    
+                  </div>
+                  <ul class="list-unstyled">
+                  <li>Email: <a href="mailto:info@careerladder.com">info@careerladder.com</a></li>
+                  <li>Phone: +94112858585</li>
+                  <li>Fax: +94112858585</li>
+                </ul>
+                </div>
+              </div>
+      
+              <div class="row text-center">
+                <div class="col-12">
+                  <p class="copyright"><small>
+                    
+                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Career Ladder Website All rights reserved..! 
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </body>
+    </html>
+    
